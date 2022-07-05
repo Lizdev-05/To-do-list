@@ -1,27 +1,27 @@
 const path = require('path');
- const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
- module.exports = {
-  mode: 'development',
-   entry: {
-     index: './src/index.js',
-     print: './src/print.js',
-   },
-   devtool: 'inline-source-map',
-   devServer: {
-    static: './dist',
+module.exports = {
+    mode: 'development',
+    entry: {
+        index: './src/index.js',
+      },
+      devServer: {
+        static: './dist',
+      },
+      plugins: [
+        new HtmlWebpackPlugin({
+          title: 'To-Do App',
+          template: './src/index.html'
+        }),
+      ],
+  output: {
+    filename: '[name].bundle.js',
+    path: path.resolve(__dirname, 'dist'),
+    clean: true,
   },
-   plugins: [
-     new HtmlWebpackPlugin({
-      title: 'Development',
-     }),
-   ],
-   output: {
-     filename: '[name].bundle.js',
-     path: path.resolve(__dirname, 'dist'),
-     clean: true,
-   },
-   module: {
+
+  module: {
     rules: [
       {
         test: /\.css$/i,
@@ -32,4 +32,4 @@ const path = require('path');
   optimization: {
     runtimeChunk: 'single',
   },
- };
+};

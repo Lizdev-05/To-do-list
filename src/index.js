@@ -27,7 +27,7 @@ const addToDo = (todoValue) => {
 
   `;
   todoLists.appendChild(todo);
-  
+
  const checkbox = document.querySelectorAll('.checkbox');
  checkbox.forEach(i =>{
    i.addEventListener('click', () => {
@@ -37,7 +37,10 @@ const addToDo = (todoValue) => {
     i.parentElement.lastElementChild.previousElementSibling.classList.toggle('edit-disable')
    })
  })
-
+  // Setting item to local storage
+ const object = new myObject(todoValue, false, checkbox.length - 1);
+ toDoArray.push(object);
+ localStorage.setItem('list', JSON.stringify(toDoArray));
 };
 
 textInput.addEventListener('keypress', e => {

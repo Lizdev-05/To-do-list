@@ -21,7 +21,7 @@ const addToDo = (todoValue) => {
   todo.classList.add('todo');
   todo.innerHTML += `
   <input type="checkbox" class='checkbox'>
-  <h2>${todoValue}</h2>
+  <span>${todoValue}</span>
 <i class="fa-solid fa-ellipsis-vertical"></i>
 <i class="fa-solid fa-trash-can"></i>
 
@@ -41,8 +41,41 @@ const addToDo = (todoValue) => {
  const object = new myObject(todoValue, false, checkbox.length - 1);
  toDoArray.push(object);
  localStorage.setItem('list', JSON.stringify(toDoArray));
+
+const editIcons = document.querySelectorAll('.fa-ellipsis-vertical');
+editIcons.forEach(i =>{
+  i.addEventListener('click', () =>{
+    editTodo(todo, i.previousElementSibling)
+  })
+})
 };
 
+
+const editTodo = (todo, todos) =>{
+const editInput = document.createElement('input');
+editInput.type = 'text';
+editInput.className = 'editInput';
+editInput.value = todos.textContent;
+todo.replaceChild(editInput, todos);
+editInput.addEventListener('keypress', e =>{
+  if(e.key === 'Enter'){
+    const todoContainers = document.querySelectorAll('.todo');
+    const localData = JSON.parse(localStorage.getItem('list'));
+    for(let i =0; i < todoContainers.length; i +=1 ){
+       if(todoContainers[i].classList.contains('toggle-container')){
+        localData[i].description = editInput.value;
+        localStorage.setItem('list', JSON.stringify(localData));
+       }
+      
+    }
+    editInput.parentElement.classList.remove('toggle-container');
+    todo.replaceChild(todos, editInput);
+    todos.textContent = editInput.value;
+  }
+
+ 
+})
+}
 textInput.addEventListener('keypress', e => {
   if (e.key === 'Enter' && textInput.value) {
     e.preventDefault()

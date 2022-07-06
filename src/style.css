@@ -15,7 +15,7 @@
 }
 
 header,
-.todo-header {
+.todo-header, .todo {
   border-bottom: 1px solid #e6e6e6;
 }
 
@@ -62,13 +62,33 @@ input::placeholder {
   padding: 20px 50px;
 }
 
-.todo-content {
+.todo-text {
   display: flex;
   justify-content: space-between;
 }
 
-.todo-content h2 {
+.todo-text h2 {
   margin-left: 10px;
   font-size: 20px;
   font-weight: 400;
 }
+
+.fa-trash-can{
+  display: none;
+}
+
+.trash-active{
+  display: block;
+}
+.toggle-container{
+  background-color: #fffed3;
+}
+
+.checkTodo{
+  text-decoration: line-through;
+}
+
+.edit-disable{
+  display: none;
+}
+

@@ -28,9 +28,26 @@
         </div>
         <div class="todo-lists">
         </div>
-        <div class="clear-btn">Clear All</div>
+        <button class="clear-btn">Clear All</button>
     </section>
    </div>
 </body>
 
 </html>
+
+<!-- const clearAll = () => {
+  const localData =JSON.parse(localStorage.getItem('list'))
+  const todo = document.querySelectorAll('.todo')
+  todo.forEach(i => {
+    if(i.classList.contains('checked-container')){
+      removeTodo(i)
+    }
+  })
+
+  let count = 0;
+  const data = Array.from(localData).filter(i => i.completed === false)
+  data.map(i => i.index = count += 1);
+  localStorage.setItem('list', JSON.stringify(data));
+}
+
+clearBtn.addEventListener('click', clearAll()); -->

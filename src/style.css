@@ -80,7 +80,7 @@ input::placeholder {
 .trash-active{
   display: block;
 }
-.toggle-container{
+.checked-container{
   background-color: #fffed3;
 }
 

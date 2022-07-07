@@ -15,39 +15,22 @@
 
 <body>
    <div class="global">
-    <header>
-        <h1>To-do's Lists</h1>
+    <div class="to-do-container" id="to-do-container">
+        <div class="header">
+            <h1 class="title">To-do's Lists</h1>
         <span><i class="fa-solid fa-arrow-turn-down"></i></span>
-        
-    </header>
-
-    <section>
-        <div class="todo-header">
-            <input type="text" placeholder="Add to your lists...">
-           <span><i class="fa-solid fa-rotate"></i></span>
         </div>
-        <div class="todo-lists">
-        </div>
-        <button class="clear-btn">Clear All</button>
-    </section>
-   </div>
+        <form class="form">
+          <div class="input-container">
+            <input type="text" class="text-input" id="text-input" placeholder="Add to your list..">
+            <span><i class="fa-solid fa-rotate"></i></span>
+          </div>
+          <div class="to-dos" id="to-dos"></div>
+          <div class="clear-button-container">
+            <p class="clear-button" id="clear-button">Clear all completed</p>
+          </div>
+        </form>
+      </div>
 </body>
 
 </html>
-
-<!-- const clearAll = () => {
-  const localData =JSON.parse(localStorage.getItem('list'))
-  const todo = document.querySelectorAll('.todo')
-  todo.forEach(i => {
-    if(i.classList.contains('checked-container')){
-      removeTodo(i)
-    }
-  })
-
-  let count = 0;
-  const data = Array.from(localData).filter(i => i.completed === false)
-  data.map(i => i.index = count += 1);
-  localStorage.setItem('list', JSON.stringify(data));
-}
-
-clearBtn.addEventListener('click', clearAll()); -->

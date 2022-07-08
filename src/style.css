@@ -8,6 +8,10 @@
   font-family: 'Lato', sans-serif;
 }
 
+body {
+  background: url(/body-img.jpg);
+}
+
 .to-do-container {
   background-color: #fff;
   display: flex;
@@ -147,4 +151,11 @@
 .clear-button:hover {
   color: #000;
   text-decoration: underline;
+}
+
+@media only screen and (max-width: 768px) {
+  .to-do-container {
+    max-width: 90%;
+    padding: 20px;
+  }
 }

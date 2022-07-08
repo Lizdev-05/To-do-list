@@ -1,5 +1,7 @@
 /* eslint-disable */
 import { setStorage } from './storage.js';
+
+
 export { deleteTask, updateStorage, tasks, addTask };
 
 const toDoList = document.getElementById('to-dos');
@@ -22,8 +24,8 @@ const addTask = (taskValue) => {
   taskContainer.innerHTML += `
     <input type="checkbox" class="checkbox">
     <span>${taskValue}</span>
-    <i class="fas fa-ellipsis-v"></i>
-    <i class="fa-solid fa-trash-can"></i>
+    <i class="fas fa-ellipsis-vertical"></i>
+    <i class="fas fa-trash-can"></i>
   `;
   toDoList.appendChild(taskContainer);
 
@@ -42,7 +44,7 @@ const addTask = (taskValue) => {
   tasks.push(newTask);
   setStorage(tasks);
 
-  const edit = document.querySelectorAll('.fa-ellipsis-v');
+  const edit = document.querySelectorAll('.fa-ellipsis-vertical');
   edit.forEach((i) => {
     i.addEventListener('click', () => {
       editTask(taskContainer, i.previousElementSibling);
@@ -102,12 +104,12 @@ const getStorage = () => {
     taskContainer.innerHTML += `
     <input type="checkbox" class="checkbox">
     <span>${i.description}</span>
-    <i class="fas fa-ellipsis-v"></i>
-    <i class="fa-solid fa-trash-can"></i>
+    <i class="fas fa-ellipsis-vertical"></i>
+    <i class="fas fa-trash-can"></i>
     `;
     toDoList.appendChild(taskContainer);
 
-    const edit = document.querySelectorAll('.fa-ellipsis-v');
+    const edit = document.querySelectorAll('.fa-ellipsis-vertical');
     edit.forEach((i) => {
       i.addEventListener('click', () => {
         editTask(taskContainer, i.previousElementSibling);

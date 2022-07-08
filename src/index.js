@@ -1,5 +1,4 @@
 /* eslint-disable */
-import _, { remove } from 'lodash';
 import './style.css';
 import { addTask } from './crud-methods.js';
 
@@ -11,6 +10,3 @@ inputBtn.addEventListener('keydown', (i) => {
     inputBtn.value = null;
   }
 });
-
-
-

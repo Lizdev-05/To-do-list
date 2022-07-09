@@ -4,7 +4,7 @@ import { addTask } from './crud-methods.js';
 
 const inputBtn = document.getElementById('text-input');
 
-inputBtn.addEventListener('keydown', (i) => {
+inputBtn.addEventListener('keyup', (i) => {
   if (i.key === 'Enter' && inputBtn.value) {
     addTask(inputBtn.value);
     inputBtn.value = null;

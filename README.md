@@ -10,7 +10,7 @@
 - Webpack
 
 ## Live Demo
-
+[Click to see the live demo](https://chipper-gecko-604f94.netlify.app)
 
 ## Getting Started
 

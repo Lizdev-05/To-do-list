@@ -1,5 +1,6 @@
 /* eslint-disable */
 import { setStorage } from './storage.js';
+import { clearAll } from './clear.js';
 
 
 export { deleteTask, updateStorage, tasks, addTask };

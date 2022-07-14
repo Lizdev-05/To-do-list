@@ -9,15 +9,17 @@ const editTask = (taskContainer, task) => {
   task.textContent = editText.value;
 };
 
-test('test edit function', () => {
-  document.body.innerHTML = `
-    <div id="to-dos">
-      <div class="list-item" id="edit"><span></span></div>
-    </div>
-  `;
-  const item = document.querySelector('#edit');
-  const text = document.querySelector('#edit span');
-  const newTask = 'new task';
-  editTask(item, text);
-  expect(text.innerHTML).toBe(newTask);
+describe('to test if edit function is working', () => {
+  test('test edit function', () => {
+    document.body.innerHTML = `
+      <div id="to-dos">
+        <div class="list-item" id="edit"><span></span></div>
+      </div>
+    `;
+    const item = document.querySelector('#edit');
+    const text = document.querySelector('#edit span');
+    const newTask = 'new task';
+    editTask(item, text);
+    expect(text.innerHTML).toBe(newTask);
+  });
 });

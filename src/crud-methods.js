@@ -1,12 +1,10 @@
 /* eslint-disable */
-import { setStorage } from './storage.js';
-import { clearAll } from './clear.js';
+import setStorage from './storage.js';
 
 
 export { deleteTask, updateStorage, tasks, addTask };
 
 const toDoList = document.getElementById('to-dos');
-const clearBtn = document.getElementById('clear-button');
 
 class Task {
   constructor(description, completed, index) {
@@ -62,6 +60,7 @@ const addTask = (taskValue) => {
 };
 
 const deleteTask = (task) => {
+  const toDoList = document.getElementById('to-dos');
   toDoList.removeChild(task);
   let count = 0;
   const localData = JSON.parse(localStorage.getItem('todo'));
@@ -154,7 +153,3 @@ const updateStorage = () => {
   }
   setStorage(localData);
 };
-
-clearBtn.addEventListener('click', () => {
-  clearAll();
-});

@@ -2,7 +2,7 @@
 import setStorage from './storage.js';
 
 
-export { deleteTask, updateStorage, tasks, addTask };
+export { deleteTask, updateStorage, tasks, addTask, editTask };
 
 const toDoList = document.getElementById('to-dos');
 

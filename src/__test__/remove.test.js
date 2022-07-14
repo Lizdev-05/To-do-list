@@ -1,4 +1,4 @@
-import { deleteTask } from './crud-methods.js';
+import { deleteTask } from '../crud-methods.js';
 
 const todoArray = [
   {

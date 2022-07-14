@@ -5,17 +5,17 @@ describe('set item to local storage and clear all items', () => {
   test('test update storage function', () => {
     const todoArray = [
       {
-        description: 'Solve mock test',
+        description: 'List item 1',
         completed: true,
         index: 1,
       },
       {
-        description: 'Take enough rest',
+        description: 'List item 2',
         completed: false,
         index: 2,
       },
       {
-        description: 'Add to do',
+        description: 'List item 3',
         completed: true,
         index: 3,
       },

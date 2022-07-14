@@ -8,8 +8,10 @@
 - CSS3
 - Linters
 - Webpack
+- Jest
 
 ## Live Demo
+
 [Click to see the live demo](https://lizdev-to-do.netlify.app/)
 
 ## Getting Started
@@ -26,7 +28,7 @@ To get a local copy up and running follow these simple example steps.
 
 ## Setup
 
-- git clone https://github.com/Lizdev-05/To-do-list.git
+- git clone <https://github.com/Lizdev-05/To-do-list.git>
 - cd todo-list
 - Follow the HTML-CSS linter confuguration to docs to setup linters [Link to Microverse linter docs](https://github.com/Lizdev-05/linters-config/tree/master/html-css-js)
 - Setup webpack configuration to bundle up your javascript modules. Follow the instructions from the [getting started guide](https://webpack.js.org/guides/getting-started/#basic-setup) to set up the basics
@@ -54,6 +56,12 @@ For tracking linters errors locally, you need to follow these steps:
 - GitHub: [@githubhandle](https://github.com/Lizdev-05)
 
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/elizabeth-oyinlade-ojesanmi-0702aa16a)
+
+**Anas Abubakar Bassi**
+
+- GitHub: [@anasbassi](https://github.com/anasbassi)
+- Twitter: [@anasabu92568449](https://twitter.com/anasabu92568449)
+- LinkedIn: [Anas Abubakar](https://linkedin.com/in/anas-abubakar-7b352722b)
 
 ## 🤝 Contributing
 

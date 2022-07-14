@@ -8,10 +8,6 @@
     "start": "webpack serve --open",
     "build": "webpack"
   },
-  "jest": {
-    "verbose": true,
-    "testEnvironment": "jsdom"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Lizdev-05/To-do-list.git"

@@ -1,3 +1,4 @@
+// webhint dissalble
 import './style.css';
 import { addTask } from './crud-methods.js';
 import { clearAll } from './clear.js';

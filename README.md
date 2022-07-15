@@ -12,7 +12,7 @@
 
 ## Live Demo
 
-[Click to see the live demo](https://lizdev-to-do.netlify.app/)
+[Click to see the live demo]( https://lizdev-05.github.io/To-do-list/)
 
 ## Getting Started
 
